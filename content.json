@@ -4,34 +4,51 @@
     "brand": "A.R.I.",
     "resume_link_text": "Download Resume",
     "resume_url": "",
-    "linkedin_url": "",
-    "footer_copyright": "\u00a9 2026 Akanbi Rahmat Ibironke. All Rights Reserved."
+    "linkedin_url": "https://www.linkedin.com/in/rahmatakanbi",
+    "footer_copyright": "© 2026 Akanbi Rahmat Ibironke. All Rights Reserved."
   },
   "hero": {
+    "photo_url": "",
+    "photo_location": "ABUJA, NIGERIA",
+    "cta_secondary_href": "#contact",
+    "cta_secondary_text": "Get in Touch",
     "eyebrow": "LL.B Candidate, Nile University of Nigeria",
     "name": "AKANBI RAHMAT IBIRONKE",
-    "tagline": "A motivated law student with a strong interest in legal studies and advocacy, eager to gain practical experience and contribute positively to a professional environment.",
-    "cta_primary_text": "View Experience",
-    "cta_primary_href": "#experience",
-    "cta_secondary_text": "Get in Touch",
-    "cta_secondary_href": "#contact",
-    "photo_url": "",
-    "photo_alt": "Portrait of Akanbi Rahmat Ibironke",
-    "photo_location": "ABUJA, NIGERIA",
     "photo_tag": "LL.B CANDIDATE",
+    "tagline": "A motivated law student with a strong interest in legal studies and advocacy, eager to gain practical experience and contribute positively to a professional environment.",
     "badges": [
-      { "label": "Institution", "value": "Nile University of Nigeria" },
-      { "label": "Program", "value": "LL.B Candidate" },
-      { "label": "Since", "value": "2023 \u2013 Present" },
-      { "label": "Location", "value": "Abuja, Nigeria" }
-    ]
+      {
+        "label": "Institution",
+        "value": "Nile University of Nigeria"
+      },
+      {
+        "label": "Program",
+        "value": "LL.B Candidate"
+      },
+      {
+        "label": "Since",
+        "value": "2023 – Present"
+      },
+      {
+        "label": "Location",
+        "value": "Abuja, Nigeria"
+      }
+    ],
+    "cta_primary_href": "#experience",
+    "cta_primary_text": "View Experience",
+    "photo_alt": "Portrait of Akanbi Rahmat Ibironke"
   },
   "about": {
     "heading": "Personal Statement",
     "paragraphs": [
       "A motivated Law student with a strong interest in legal studies and advocacy. Eager to gain practical experience and contribute positively to a professional environment."
     ],
-    "skills": ["Legal Research", "Communication", "Writing", "Teamwork"],
+    "skills": [
+      "Legal Research",
+      "Communication",
+      "Writing",
+      "Teamwork"
+    ],
     "institution_name": "Nile University of Nigeria",
     "institution_address": "Abuja, Nigeria"
   },
@@ -40,21 +57,28 @@
     "subheading": "Student leadership and practical exposure through law school activities.",
     "items": [
       {
-        "date": "2023 \u2013 PRESENT",
+        "date": "2023 – PRESENT",
         "location": "NILE UNIVERSITY OF NIGERIA",
         "tag": "Student Society",
         "title": "Law Students' Society (LSS)",
         "subtitle": "Member",
         "description": "Participated in student activities and legal discussions, including moot court and mock trial exercises.",
-        "chips": ["Moot Court", "Mock Trial", "Legal Discussions"]
+        "chips": [
+          "Moot Court",
+          "Mock Trial",
+          "Legal Discussions"
+        ]
       }
     ]
   },
   "education": {
     "degree_label": "Candidate for Bachelor of Laws (LL.B)",
     "school_name": "Nile University of Nigeria",
-    "school_meta": "2023 \u2013 Present | Abuja, Nigeria",
-    "interests": ["Reading", "Gaining experience"],
+    "school_meta": "2023 – Present | Abuja, Nigeria",
+    "interests": [
+      "Reading",
+      "Gaining experience"
+    ],
     "referees": "Available on request"
   },
   "contact": {
