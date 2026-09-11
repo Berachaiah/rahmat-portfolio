@@ -99,6 +99,21 @@
     }
   }
 </script>
+<!-- Netlify Identity: must be present on the homepage too, so that
+     invite / recovery / confirmation links (which land on "/") can be
+     detected and handled, not just on /admin -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </head>
 <body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
 
