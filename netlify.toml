@@ -1,6 +1,0 @@
-[build]
-  publish = "."
-
-# Netlify Forms needs the form to be detected at deploy time.
-# The contact form in index.html already has data-netlify="true",
-# so no extra build step is required for this static site.
