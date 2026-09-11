@@ -1,0 +1,118 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images (like her portrait) get stored, and the URL
+# prefix the site should use to reference them.
+media_folder: "images"
+public_folder: "/images"
+
+publish_mode: simple
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio Content"
+    files:
+      - name: "content"
+        label: "Site Content"
+        file: "content.json"
+        fields:
+          - label: "Site Settings"
+            name: "site"
+            widget: "object"
+            fields:
+              - { label: "Browser Tab Title", name: "meta_title", widget: "string" }
+              - { label: "Brand / Initials (top left)", name: "brand", widget: "string" }
+              - { label: "Resume Button Text", name: "resume_link_text", widget: "string" }
+              - label: "Resume / CV File (upload a PDF)"
+                name: "resume_url"
+                widget: "file"
+                media_folder: "/files"
+                public_folder: "/files"
+                hint: "Upload your CV as a PDF here. Leave empty and the button will just scroll to the Contact section instead."
+                required: false
+              - { label: "Footer Copyright Line", name: "footer_copyright", widget: "string" }
+
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow / Title", name: "eyebrow", widget: "string" }
+              - { label: "Full Name (large heading)", name: "name", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "text" }
+              - { label: "Primary Button Text", name: "cta_primary_text", widget: "string" }
+              - { label: "Primary Button Link", name: "cta_primary_href", widget: "string" }
+              - { label: "Secondary Button Text", name: "cta_secondary_text", widget: "string" }
+              - { label: "Secondary Button Link", name: "cta_secondary_href", widget: "string" }
+              - { label: "Photo", name: "photo_url", widget: "image", required: false }
+              - { label: "Photo Alt Text", name: "photo_alt", widget: "string", required: false }
+              - { label: "Photo Caption \u2014 Location", name: "photo_location", widget: "string" }
+              - { label: "Photo Caption \u2014 Tag", name: "photo_tag", widget: "string" }
+              - label: "Credential Badges (max 4 look best)"
+                name: "badges"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "Key Skills (tags)"
+                name: "skills"
+                widget: "list"
+                field: { label: "Skill", name: "skill", widget: "string" }
+              - { label: "Institution Name", name: "institution_name", widget: "string" }
+              - { label: "Institution Address", name: "institution_address", widget: "string" }
+
+          - label: "Experience Section"
+            name: "experience"
+            widget: "object"
+            fields:
+              - { label: "Section Heading", name: "heading", widget: "string" }
+              - { label: "Section Subheading", name: "subheading", widget: "text" }
+              - label: "Experience Entries"
+                name: "items"
+                widget: "list"
+                summary: "{{title}} \u2014 {{date}}"
+                fields:
+                  - { label: "Date / Term", name: "date", widget: "string" }
+                  - { label: "Location", name: "location", widget: "string" }
+                  - { label: "Tag (small label)", name: "tag", widget: "string" }
+                  - { label: "Organization / Title", name: "title", widget: "string" }
+                  - { label: "Role / Subtitle", name: "subtitle", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - label: "Skill Chips"
+                    name: "chips"
+                    widget: "list"
+                    field: { label: "Chip", name: "chip", widget: "string" }
+
+          - label: "Education Section"
+            name: "education"
+            widget: "object"
+            fields:
+              - { label: "Degree Label", name: "degree_label", widget: "string" }
+              - { label: "Law School Name", name: "school_name", widget: "string" }
+              - { label: "School Meta (grad date / city)", name: "school_meta", widget: "string" }
+              - label: "Interests"
+                name: "interests"
+                widget: "list"
+                field: { label: "Interest", name: "interest", widget: "string" }
+              - { label: "Referees", name: "referees", widget: "string" }
+
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro Paragraph", name: "intro", widget: "text" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Phone (display, e.g. 0808 471 3560)", name: "phone_display", widget: "string" }
+              - { label: "Phone (tel: link, e.g. +2348084713560)", name: "phone_tel", widget: "string" }
